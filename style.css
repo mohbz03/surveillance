@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(236, 239, 242)
+}
+/*----------------- SideBar -------------*/
+aside {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+#SideBar{
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 11% 1% 1fr 7%;
+}
+#SideBarHeader{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    height: 35px;
+    width: 35px;
+}
+#SideBarTitle{
+    margin-top: 3.5%;
+    font-size: 15px;
+    color: rgb(39, 39, 39);
+}
+.SideBarIcon{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow:  9px 9px 36px #b6b8ba, -9px -9px 36px #ffffff;
+}
+#SideBarList{
+    list-style: none;
+    padding-left: 7px;
+}
+.SideBarListElement{
+    width: 95%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:  15px;
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.bx{
+    font-size: 15px;
+}
+.SideBarText{
+    font-size: 15px;
+    margin-top: 2px;
+    color: rgba(79, 78, 78, 0.984);
+}
+#SelectedT{
+    color: black;
+    font-weight: bold;
+}
+#SelectedI{
+    background-color: rgb(203, 12, 159);
+    color: white;
+}
+#SelectedR{
+    background-color: #ffffff;
+}
+#myIcon1{
+    margin-top: 9px;
+    margin-left: 13px;
+}
+#myIcon2{
+    margin-top: 9px;
+    margin-left: 20px;
+}
+#myIcon3{
+    margin-top: 9px;
+    margin-left: 46px;
+}
+#myIcon4{
+    margin-top: 9px;
+    margin-left: 47px;
+}
+#LogOut{
+    background-image: linear-gradient(to right,rgb(203, 12, 159),rgb(156, 3, 176));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 2%;
+    text-decoration: none;
+    border:  none;
+}
+
+hr {
+    margin-left: 8px;
+    margin-top: 5px;
+    width: 90%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(184, 184, 184, 0.5), rgba(255, 255, 255, 0));
+    transition: width  0.4s ease;
+}
+/* ------------------------------------------ */
+
+
+/* ---------- main container ---------*/
+main {
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 1fr;
+}
+#UpBar{
+    display: grid;
+    grid-template-columns: 30% 1fr 15%;
+    grid-template-rows: 1fr;
+}
+#NavPath{
+   margin-top: 20px; 
+   margin-left: 60px;
+}
+#Other{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.bxs-user,.bx-help-circle,.bxs-bell{
+    margin-top: 25px;
+    font-size: 20px;
+}
+.adm{
+    margin-top: 25px;
+}
+#SearchBar{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+/***** search form *****/
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 150px;
+    --height-of-input: 30px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: rgb(203, 12, 159);
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  } 
+  /*****************************/
+  /****** content ******/
+  #content{
+    background-color: rgb(236, 239, 242);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }

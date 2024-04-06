@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="surveillance.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-H3Uo2X5/T35dfNAq+D7XmgD6/DzBkd6QFEJkmXfD9DFOm1lJhqoSYmEbePHXFXIv" crossorigin="anonymous">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <body>
+        <aside>
+            <div id="SideBar">
+                <div id="SideBarHeader">
+                    <img id="logo" src="m.png">
+                    <p id="SideBarTitle">Sys Name</p>
+                </div>
+                <hr>
+                <ul id="SideBarList">
+                    <li class="SideBarListElement">
+                        <div class="SideBarIcon">
+                            <i class='bx bxs-dashboard'></i>
+                        </div>
+                        <p class="SideBarText">Dashboard</p>
+                    </li>
+                    <li id="SelectedR" class="SideBarListElement">
+                        <div id="SelectedI" class="SideBarIcon">
+                            <i class='bx bxs-user-rectangle SideBar'></i>
+                        </div>
+                        <p id="SelectedT" class="SideBarText">Gestionnaire</p>
+                    </li>
+                    <li class="SideBarListElement">
+                        <div class="SideBarIcon">
+                            <i class='bx bx-book-content'></i>
+                        </div>
+                        <p class="SideBarText">Configuration</p>
+                        <i id="myIcon1" class='bx bx-chevron-down c1'></i>
+                    </li>
+                    <li class="SideBarListElement">
+                        <div class="SideBarIcon">
+                            <i class='bx bx-doughnut-chart'></i>
+                        </div>
+                        <p class="SideBarText">Surveillance</p>
+                        <i id="myIcon2" class='bx bx-chevron-down c2'></i>
+                    </li>
+                    <li class="SideBarListElement">
+                        <div class="SideBarIcon">
+                            <i class='bx bx-key' ></i>
+                        </div>
+                        <p class="SideBarText">Securité</p>
+                        <i id="myIcon3" class='bx bx-chevron-down c3'></i>
+                    </li>
+                    <li class="SideBarListElement">
+                        <div class="SideBarIcon">
+                            <i class='bx bx-spreadsheet'></i>
+                        </div>
+                        <p class="SideBarText">Rapport</p>
+                        <i id="myIcon4" class='bx bx-chevron-down c4'></i>
+                    </li>
+                    <li class="SideBarListElement">
+                        <div class="SideBarIcon">
+                            <i class='bx bx-cog' ></i>
+                        </div>
+                        <p class="SideBarText">paramètre</p>
+                    </li>
+                </ul>
+                <button id="LogOut">Log out</button>
+            </div>
+        </aside>
+        <main>
+            <div id="UpBar">
+                <div id="NavPath"><p>Gestionnaire<br><strong>Gestionnaire</strong></p></div>
+                <div id="SearchBar">
+                    <form class="form">
+                        <button>
+                            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                                <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <input class="input" placeholder="Chercher" required="" type="text">
+                        <button class="reset" type="reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div id="Other">
+                    <i class='bx bxs-user' ></i>
+                    <p class="adm">Admin</p>
+                    <i class='bx bx-help-circle' ></i>
+                    <i class='bx bxs-bell'></i>
+                </div>
+            </div>
+            <div id="content">
+                <div id="cnt1">
+                    <div id="stat1" class="stat">
+                        <div class="inlineT"><span class="Tt">Routeur surveilleés</span><span class="Bt">0 dispositifs</span></div>
+                        <div class="inIMG"><img id="Rt" src="router.png" alt=""></div>
+                    </div>
+                    <div id="stat1" class="stat">
+                        <div class="inlineT"><span class="Tt">Switchs surveillés</span><span class="Bt">0 dispositifs</span></div>
+                        <div class="inIMG"><img id="Rt" src="router.png" alt=""></div>
+                    </div>
+                    <div id="stat3" class="stat">
+                        <div class="inlineT"><span class="Tt">liens surveilleés</span><span class="Bt">0 dispositifs</span></div>
+                        <div class="inIMG"><img id="Rt" src="router.png" alt=""></div>
+                    </div>
+                    <div id="stat4" class="stat">
+                        <div class="inlineT"><span class="Tt">derniere surveillance</span><span class="Bt">il y a 5 min</span></div>
+                        <div class="inIMG"><img id="Rt" src="router.png" alt=""></div>
+                    </div>
+                </div>
+                <div id="cnt2" class="cnt">
+                    <div id="SurvR1" class="SurvR">
+                        <div id="divt">
+                            <span class="text1">etat de santé d'un dispositif</span>
+                            <span class="text2">examiner l'etat de santé d'un dispoditif</span>
+                            <span class="text3">cette fonctionnalite vous permet de voir a temps reel les information de sante d'un dispositif</span>
+                            <div class="text4">
+                                <div id="but" class="butA">
+                                    <span id="btnY">Selectionner</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <div id="textInline" class="textInlineC">
+                                    <p style="margin-right: 20px; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">confirmer</p>
+                                    <i id="retour1" class='bx bx-arrow-back'></i>
+                                </div>
+                                <div id="in1" class="inlineB">
+                                    <p id="textbtn" class="textbt">Choisir le dispositif</p><i class='bx bx-arrow-back bx-transform'></i>
+                                </div>
+                            </div>
+                            <div id="SB1" class="selectBox"> 
+                                <input id="X1" type="text" class="search-box" placeholder="Selectionner un dispositif"> 
+                                    <ul class="options"> 
+                                        <li data-value="R1"><div><img src="router1.png" alt=""></div><span class="search-V">R1</span></li> 
+                                        <li data-value="R32"><div><img src="router1.png" alt=""></div><span class="search-V">R32</span></li> 
+                                        <li data-value="R889"><div><img src="router1.png" alt=""></div><span class="search-V">R889</span></li> 
+                                        <li data-value="R87"><div><img src="router1.png" alt=""></div><span class="search-V">R87</span></li> 
+                                        <li data-value="R89"><div><img src="router1.png" alt=""></div><span class="search-V">R89</span></li> 
+                                        <li data-value="R10"><div><img src="router1.png" alt=""></div><span class="search-V">R10</span></li> 
+                                        <li data-value="R898"><div><img src="router1.png" alt=""></div><span class="search-V">R88</span></li> 
+                                        <li data-value="R78"><div><img src="router1.png" alt=""></div><span class="search-V">R78</span></li> 
+                                        <li data-value="R99"><div><img src="router1.png" alt=""></div><span class="search-V">R99</span></li> 
+                                        <li data-value="S89"><div><img src="router1.png" alt=""></div><span class="search-V">S89</span></li> 
+                                        <li data-value="S78"><div><img src="switch.png" alt=""></div><span class="search-V">S78</span></li> 
+                                        <li data-value="S9"><div><img src="switch.png" alt=""></div><span class="search-V">S9</span></li> 
+                                        <li data-value="Rt"><div><img src="router1.png" alt=""></div><span class="search-V">Rt</span></li> 
+                                        <li data-value="Ry"><div><img src="router1.png" alt=""></div><span class="search-V">Ry</span></li> 
+                                        <li data-value="R9"><div><img src="router1.png" alt=""></div><span class="search-V">R9</span></li> 
+                                        <li data-value="R23"><div><img src="router1.png" alt=""></div><span class="search-V">R23</span></li> 
+                                        <li data-value="R701"><div><img src="router1.png" alt=""></div><span class="search-V">R701</span></li> 
+                                        <li data-value="S708"><div><img src="switch.png" alt=""></div><span class="search-V">S708</span></li> 
+                                        <li data-value="X-T"><div><img src="router1.png" alt=""></div><span class="search-V">X-T</span></li>
+                                    </ul> 
+                            </div>
+                        </div>
+                        <div id="divimg"><img src="tit2.png" alt=""></div>
+                    </div>
+                    <div id="SurvR2" class="SurvR">
+                        <div id="divt">
+                            <span class="text1">performance d'un lien reseau</span>
+                            <span class="text2">examiner les performances d'un lien reseau</span>
+                            <span class="text3">cette fonctionnalite vous permet de voir a temps reel les performance d'un lien reseau</span>
+                            <div class="text4 elargit t1">
+                                <div id="but4" class="butA">
+                                    <span id="btnY4">Selectionner</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <div id="LinkLogo2" class="shr1 shr2"><i class='bx bx-stats'></i></div>
+                                <div id="but5" class="butA">
+                                    <span id="btnY5">Selectionner</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <div id="textInline3" class="textInlineC">
+                                    <p style="margin-right: 10px; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">confirmer</p>
+                                    <i id="retour4" class='bx bx-arrow-back'></i>
+                                </div>
+                                <div id="in13" class="inlineB">
+                                    <p id="textbtn13" class="textbt">Choisir le lien reseau</p><i class='bx bx-arrow-back bx-transform'></i>
+                                </div>
+                            </div>
+                            <div class="selectboxHolder">
+                                <div id="SB5" class="selectBox">  
+                                    <input id="X2" type="text" class="search-box" placeholder="Selectionner un dispositif">
+                                    <ul class="options"> 
+                                        <li data-value="R1"><div><img src="router1.png" alt=""></div><span class="search-V">R1</span></li> 
+                                        <li data-value="R32"><div><img src="router1.png" alt=""></div><span class="search-V">R32</span></li> 
+                                        <li data-value="R889"><div><img src="router1.png" alt=""></div><span class="search-V">R889</span></li> 
+                                        <li data-value="R87"><div><img src="router1.png" alt=""></div><span class="search-V">R87</span></li> 
+                                        <li data-value="R89"><div><img src="router1.png" alt=""></div><span class="search-V">R89</span></li> 
+                                        <li data-value="R10"><div><img src="router1.png" alt=""></div><span class="search-V">R10</span></li> 
+                                        <li data-value="R898"><div><img src="router1.png" alt=""></div><span class="search-V">R88</span></li> 
+                                        <li data-value="R78"><div><img src="router1.png" alt=""></div><span class="search-V">R78</span></li> 
+                                        <li data-value="R99"><div><img src="router1.png" alt=""></div><span class="search-V">R99</span></li> 
+                                        <li data-value="S89"><div><img src="router1.png" alt=""></div><span class="search-V">S89</span></li> 
+                                        <li data-value="S78"><div><img src="switch.png" alt=""></div><span class="search-V">S78</span></li> 
+                                        <li data-value="S9"><div><img src="switch.png" alt=""></div><span class="search-V">S9</span></li> 
+                                        <li data-value="Rt"><div><img src="router1.png" alt=""></div><span class="search-V">Rt</span></li> 
+                                        <li data-value="Ry"><div><img src="router1.png" alt=""></div><span class="search-V">Ry</span></li> 
+                                        <li data-value="R9"><div><img src="router1.png" alt=""></div><span class="search-V">R9</span></li> 
+                                        <li data-value="R23"><div><img src="router1.png" alt=""></div><span class="search-V">R23</span></li> 
+                                        <li data-value="R701"><div><img src="router1.png" alt=""></div><span class="search-V">R701</span></li> 
+                                        <li data-value="S708"><div><img src="switch.png" alt=""></div><span class="search-V">S708</span></li> 
+                                        <li data-value="X-T"><div><img src="router1.png" alt=""></div><span class="search-V">X-T</span></li>
+                                    </ul> 
+                            </div>
+                            <div id="SB6" class="selectBox">  
+                                <input id="X3" type="text" class="search-box" placeholder="Selectionner un dispositif">
+                                <ul class="options"> 
+                                    <li data-value="R1"><div><img src="router1.png" alt=""></div><span class="search-V">R1</span></li> 
+                                    <li data-value="R32"><div><img src="router1.png" alt=""></div><span class="search-V">R32</span></li> 
+                                    <li data-value="R889"><div><img src="router1.png" alt=""></div><span class="search-V">R889</span></li> 
+                                    <li data-value="R87"><div><img src="router1.png" alt=""></div><span class="search-V">R87</span></li> 
+                                    <li data-value="R89"><div><img src="router1.png" alt=""></div><span class="search-V">R89</span></li> 
+                                    <li data-value="R10"><div><img src="router1.png" alt=""></div><span class="search-V">R10</span></li> 
+                                    <li data-value="R898"><div><img src="router1.png" alt=""></div><span class="search-V">R88</span></li> 
+                                    <li data-value="R78"><div><img src="router1.png" alt=""></div><span class="search-V">R78</span></li> 
+                                    <li data-value="R99"><div><img src="router1.png" alt=""></div><span class="search-V">R99</span></li> 
+                                    <li data-value="S89"><div><img src="router1.png" alt=""></div><span class="search-V">S89</span></li> 
+                                    <li data-value="S78"><div><img src="switch.png" alt=""></div><span class="search-V">S78</span></li> 
+                                    <li data-value="S9"><div><img src="switch.png" alt=""></div><span class="search-V">S9</span></li> 
+                                    <li data-value="Rt"><div><img src="router1.png" alt=""></div><span class="search-V">Rt</span></li> 
+                                    <li data-value="Ry"><div><img src="router1.png" alt=""></div><span class="search-V">Ry</span></li> 
+                                    <li data-value="R9"><div><img src="router1.png" alt=""></div><span class="search-V">R9</span></li> 
+                                    <li data-value="R23"><div><img src="router1.png" alt=""></div><span class="search-V">R23</span></li> 
+                                    <li data-value="R701"><div><img src="router1.png" alt=""></div><span class="search-V">R701</span></li> 
+                                    <li data-value="S708"><div><img src="switch.png" alt=""></div><span class="search-V">S708</span></li> 
+                                    <li data-value="X-T"><div><img src="router1.png" alt=""></div><span class="search-V">X-T</span></li>
+                                </ul> 
+                                </div>
+                            </div>
+                        </div>
+                        <div id="divimg8" ><img src="tit.png" alt=""></div>
+                    </div>
+                </div>
+                <div id="cnt3" class="cnt">
+                        <div id="Sc1">
+                            <span class="Sc21">Surveilleur de dispositifs</span>
+                            <span class="Sc22">cette focntionnalité permet d'attribuer un surveilleur qui analyse l'etat de santé d'un dispositif et de notifier en cas de depassement des seuills definie</span>
+                            <div class="text4">
+                                <div id="but1" class="butA">
+                                    <span id="btnY1">Selectionné</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <div id="textInline1" class="textInlineC">
+                                    <p style="margin-right: 20px; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">confirmer</p>
+                                    <i id="retour2" class='bx bx-arrow-back'></i>
+                                </div>
+                                <div id="in11" class="inlineB">
+                                    <p id="textbtn1" class="textbt">Choisir le dispositif</p><i class='bx bx-arrow-back bx-transform'></i>
+                                </div>
+                            </div>
+                        <div id="SB2" class="selectBox">  
+                            <input type="text" class="search-box" placeholder="Selectionner un dispositif">
+                            <ul class="options"> 
+                                <li data-value="R1"><div><img src="router1.png" alt=""></div><span class="search-V">R1</span></li> 
+                                <li data-value="R32"><div><img src="router1.png" alt=""></div><span class="search-V">R32</span></li> 
+                                <li data-value="R889"><div><img src="router1.png" alt=""></div><span class="search-V">R889</span></li> 
+                                <li data-value="R87"><div><img src="router1.png" alt=""></div><span class="search-V">R87</span></li> 
+                                <li data-value="R89"><div><img src="router1.png" alt=""></div><span class="search-V">R89</span></li> 
+                                <li data-value="R10"><div><img src="router1.png" alt=""></div><span class="search-V">R10</span></li> 
+                                <li data-value="R898"><div><img src="router1.png" alt=""></div><span class="search-V">R88</span></li> 
+                                <li data-value="R78"><div><img src="router1.png" alt=""></div><span class="search-V">R78</span></li> 
+                                <li data-value="R99"><div><img src="router1.png" alt=""></div><span class="search-V">R99</span></li> 
+                                <li data-value="S89"><div><img src="router1.png" alt=""></div><span class="search-V">S89</span></li> 
+                                <li data-value="S78"><div><img src="switch.png" alt=""></div><span class="search-V">S78</span></li> 
+                                <li data-value="S9"><div><img src="switch.png" alt=""></div><span class="search-V">S9</span></li> 
+                                <li data-value="Rt"><div><img src="router1.png" alt=""></div><span class="search-V">Rt</span></li> 
+                                <li data-value="Ry"><div><img src="router1.png" alt=""></div><span class="search-V">Ry</span></li> 
+                                <li data-value="R9"><div><img src="router1.png" alt=""></div><span class="search-V">R9</span></li> 
+                                <li data-value="R23"><div><img src="router1.png" alt=""></div><span class="search-V">R23</span></li> 
+                                <li data-value="R701"><div><img src="router1.png" alt=""></div><span class="search-V">R701</span></li> 
+                                <li data-value="S708"><div><img src="switch.png" alt=""></div><span class="search-V">S708</span></li> 
+                                <li data-value="X-T"><div><img src="router1.png" alt=""></div><span class="search-V">X-T</span></li>
+                            </ul> 
+                    </div>
+                        </div>
+                        <div id="Sc2">
+                            <span class="Sc21">Surveilleur de liens reseau</span>
+                            <span class="Sc22">cette focntionnalité permet d'attribuer un surveilleur qui analyse <br> les performances d'un lien reseau et de notifier en cas de depassement des seuills definie</span>
+                            <div class="text4 elargit">
+                                <div id="but2" class="butA">
+                                    <span id="btnY2">Selectionné</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <div id="LinkLogo1" class="shr1"><i class='bx bx-stats'></i></div>
+                                <div id="but3" class="butA">
+                                    <span id="btnY3">Selectionné1</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <div id="textInline2" class="textInlineC">
+                                    <p style="margin-right: 20px; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">confirmer</p>
+                                    <i id="retour3" class='bx bx-arrow-back'></i>
+                                </div>
+                                <div id="in12" class="inlineB">
+                                    <p id="textbtn12" class="textbt">Choisir le lien reseau</p><i class='bx bx-arrow-back bx-transform'></i>
+                                </div>
+                            </div>
+
+                            <div class="selectboxHolder">
+                                <div id="SB3" class="selectBox">  
+                                    <input type="text" class="search-box" placeholder="Selectionner un dispositif">
+                                    <ul class="options"> 
+                                        <li data-value="R1"><div><img src="router1.png" alt=""></div><span class="search-V">R1</span></li> 
+                                        <li data-value="R32"><div><img src="router1.png" alt=""></div><span class="search-V">R32</span></li> 
+                                        <li data-value="R889"><div><img src="router1.png" alt=""></div><span class="search-V">R889</span></li> 
+                                        <li data-value="R87"><div><img src="router1.png" alt=""></div><span class="search-V">R87</span></li> 
+                                        <li data-value="R89"><div><img src="router1.png" alt=""></div><span class="search-V">R89</span></li> 
+                                        <li data-value="R10"><div><img src="router1.png" alt=""></div><span class="search-V">R10</span></li> 
+                                        <li data-value="R898"><div><img src="router1.png" alt=""></div><span class="search-V">R88</span></li> 
+                                        <li data-value="R78"><div><img src="router1.png" alt=""></div><span class="search-V">R78</span></li> 
+                                        <li data-value="R99"><div><img src="router1.png" alt=""></div><span class="search-V">R99</span></li> 
+                                        <li data-value="S89"><div><img src="router1.png" alt=""></div><span class="search-V">S89</span></li> 
+                                        <li data-value="S78"><div><img src="switch.png" alt=""></div><span class="search-V">S78</span></li> 
+                                        <li data-value="S9"><div><img src="switch.png" alt=""></div><span class="search-V">S9</span></li> 
+                                        <li data-value="Rt"><div><img src="router1.png" alt=""></div><span class="search-V">Rt</span></li> 
+                                        <li data-value="Ry"><div><img src="router1.png" alt=""></div><span class="search-V">Ry</span></li> 
+                                        <li data-value="R9"><div><img src="router1.png" alt=""></div><span class="search-V">R9</span></li> 
+                                        <li data-value="R23"><div><img src="router1.png" alt=""></div><span class="search-V">R23</span></li> 
+                                        <li data-value="R701"><div><img src="router1.png" alt=""></div><span class="search-V">R701</span></li> 
+                                        <li data-value="S708"><div><img src="switch.png" alt=""></div><span class="search-V">S708</span></li> 
+                                        <li data-value="X-T"><div><img src="router1.png" alt=""></div><span class="search-V">X-T</span></li>
+                                    </ul> 
+                            </div>
+                            <div id="SB4" class="selectBox">  
+                                <input type="text" class="search-box" placeholder="Selectionner un dispositif">
+                                <ul class="options"> 
+                                    <li data-value="R1"><div><img src="router1.png" alt=""></div><span class="search-V">R1</span></li> 
+                                    <li data-value="R32"><div><img src="router1.png" alt=""></div><span class="search-V">R32</span></li> 
+                                    <li data-value="R889"><div><img src="router1.png" alt=""></div><span class="search-V">R889</span></li> 
+                                    <li data-value="R87"><div><img src="router1.png" alt=""></div><span class="search-V">R87</span></li> 
+                                    <li data-value="R89"><div><img src="router1.png" alt=""></div><span class="search-V">R89</span></li> 
+                                    <li data-value="R10"><div><img src="router1.png" alt=""></div><span class="search-V">R10</span></li> 
+                                    <li data-value="R898"><div><img src="router1.png" alt=""></div><span class="search-V">R88</span></li> 
+                                    <li data-value="R78"><div><img src="router1.png" alt=""></div><span class="search-V">R78</span></li> 
+                                    <li data-value="R99"><div><img src="router1.png" alt=""></div><span class="search-V">R99</span></li> 
+                                    <li data-value="S89"><div><img src="router1.png" alt=""></div><span class="search-V">S89</span></li> 
+                                    <li data-value="S78"><div><img src="switch.png" alt=""></div><span class="search-V">S78</span></li> 
+                                    <li data-value="S9"><div><img src="switch.png" alt=""></div><span class="search-V">S9</span></li> 
+                                    <li data-value="Rt"><div><img src="router1.png" alt=""></div><span class="search-V">Rt</span></li> 
+                                    <li data-value="Ry"><div><img src="router1.png" alt=""></div><span class="search-V">Ry</span></li> 
+                                    <li data-value="R9"><div><img src="router1.png" alt=""></div><span class="search-V">R9</span></li> 
+                                    <li data-value="R23"><div><img src="router1.png" alt=""></div><span class="search-V">R23</span></li> 
+                                    <li data-value="R701"><div><img src="router1.png" alt=""></div><span class="search-V">R701</span></li> 
+                                    <li data-value="S708"><div><img src="switch.png" alt=""></div><span class="search-V">S708</span></li> 
+                                    <li data-value="X-T"><div><img src="router1.png" alt=""></div><span class="search-V">X-T</span></li>
+                                </ul> 
+                                </div>
+                            </div>
+                        
+                        </div>
+                </div>
+            </div>
+        </main>
+        <script src="surveillance.js"></script>
+    </body>
+</html>
